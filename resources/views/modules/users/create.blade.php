@@ -14,6 +14,15 @@
                     <button class="btn btn-primary mt-3">Agregar</button>
                     <a href="{{route('index')}}" class="btn btn-danger mt-3"> <i class="fa-solid fa-backward"></i> Cancelar</a>
                   </form>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const nameInput = document.getElementById('name');
+                        nameInput.addEventListener('input', function () {
+                            this.value = this.value.replace(/[0-9]/g, '');
+                        });
+                    });
+                </script>
+                
                 </div>
               </div>
         </div>
